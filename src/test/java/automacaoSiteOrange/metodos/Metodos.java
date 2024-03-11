@@ -30,4 +30,8 @@ public class Metodos extends Driver {
 			e.printStackTrace();
 		}
 	}
-}
+	
+	public static void validarTexto(By elemento, String textoEsperado) {
+		String textoCapturado = driver.findElement(elemento).getText();
+		assertEquals(textoCapturado, textoEsperado);
+}}

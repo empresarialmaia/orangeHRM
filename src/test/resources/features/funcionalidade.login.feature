@@ -10,9 +10,18 @@ Feature: Login
 
   @positivo
   Scenario: Login com sucesso   
-    When informe os dados validos
+    When informar os dados validos
     And clicar no botao login 
     Then login efetuado com sucesso direcionando para tela de usuario logado 
+    
+ 
+ @negativo 
+ Scenario: Login usuario errado
+    When informar usuario errado
+    But informar a senha correta
+    And clicar no botao login
+    Then aparece mensagem Invalid credentials
+  
     
 
   
