@@ -8,6 +8,12 @@ import io.cucumber.java.en.When;
 
 public class FuncionalidadeLoginTest {
 
+	String usuario = "Admin";
+	String senha = "admin123";
+	String urlLogada = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
+	String usuarioErrado = "teste";
+	String msgUsuarioInvalido = "Invalid credentials";
+	
 	LoginPage page = new LoginPage();
 
 	@Given("que eu esteja na tela de login {string}")
@@ -18,8 +24,8 @@ public class FuncionalidadeLoginTest {
 
 	@When("informar os dados validos")
 	public void informarOsDadosValidos() {
-		page.loginUsuarioComSucesso();
-		page.loginSenhaComSucesso();
+		page.loginUsuarioComSucesso(this.usuario);
+		page.loginSenhaComSucesso(this.senha);
 
 	}
 
@@ -31,26 +37,28 @@ public class FuncionalidadeLoginTest {
 
 	@Then("login efetuado com sucesso direcionando para tela de usuario logado")
 	public void loginEfetuadoComSucessoDirecionandoParaTelaDeUsuarioLogado() {
-		page.validacaoUrl();
+		page.validacaoUrl(this.urlLogada);
 		Executa.encerrarTest();
 
 	}
 
 	@When("informar usuario errado")
 	public void informarUsuarioErrado() {
-		page.loginUsuarioIncorreto();
+		page.loginUsuarioIncorreto(this.usuarioErrado);
 
 	}
 
 	@When("informar a senha correta")
 	public void informarASenhaCorreta() {
-		page.loginSenhaComSucesso();
+		page.loginSenhaComSucesso(this.senha);
 
 	}
 
 	@Then("aparece mensagem Invalid credentials")
 	public void apareceMensagemInvalidCredentials() {
-		page.loginUsuarioIncorreto();
+		page.loginUsuarioIncorreto(this.msgUsuarioInvalido);
+		Executa.encerrarTest();
+
 		
 
 	}
