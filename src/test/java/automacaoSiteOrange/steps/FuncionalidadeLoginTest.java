@@ -10,10 +10,7 @@ public class FuncionalidadeLoginTest {
 
 	String usuario = "Admin";
 	String senha = "admin123";
-	String urlLogada = "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index";
-	String usuarioErrado = "teste";
-	String msgUsuarioInvalido = "Invalid credentials";
-	
+
 	LoginPage page = new LoginPage();
 
 	@Given("que eu esteja na tela de login {string}")
@@ -24,12 +21,11 @@ public class FuncionalidadeLoginTest {
 
 	@When("informar os dados validos")
 	public void informarOsDadosValidos() {
-		page.loginUsuarioComSucesso(this.usuario);
-		page.loginSenhaComSucesso(this.senha);
+		page.login(usuario, senha);
 
 	}
 
-	@When("clicar no botao login")
+	@When("clica no botao login")
 	public void clicarNoBotaoLogin() {
 		page.botaoLogin();
 
@@ -37,30 +33,31 @@ public class FuncionalidadeLoginTest {
 
 	@Then("login efetuado com sucesso direcionando para tela de usuario logado")
 	public void loginEfetuadoComSucessoDirecionandoParaTelaDeUsuarioLogado() {
-		page.validacaoUrl(this.urlLogada);
+		page.validacaoUrlLogada();
 		Executa.encerrarTest();
 
 	}
 
-	@When("informar usuario errado")
-	public void informarUsuarioErrado() {
-		page.loginUsuarioIncorreto(this.usuarioErrado);
+	@When("informar usuario errado e senha correta")
+	public void informarUsuarioErradoEsenhaCorreta() {
+		page.login("errado", senha);
 
 	}
 
-	@When("informar a senha correta")
-	public void informarASenhaCorreta() {
-		page.loginSenhaComSucesso(this.senha);
-
-	}
-
-	@Then("aparece mensagem Invalid credentials")
-	public void apareceMensagemInvalidCredentials() {
-		page.loginUsuarioIncorreto(this.msgUsuarioInvalido);
+	@Then("aparece mensagem de erro")
+	public void apareceMensagemDeErro() {
+		page.msgErro();
 		Executa.encerrarTest();
 
-		
-
 	}
+	
+	@When("informar usuario correto e senha errada")
+	public void informarUsuarioCorretoESenhaErrada() {
+		page.login(usuario, "errado");
 
+	   
+	}
+	
+	
+	
 }
