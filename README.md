@@ -1,8 +1,8 @@
-#Projeto de automação de testes para o site OrangeHRM
+# Projeto de automação de testes para o site OrangeHRM
 
 Este projeto automatiza a execução de testes no site [OrangeHRM](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login) para validar suas funcionalidades de maneira eficiente e precisa.
 
-#Tecnologias utilizadas
+## Tecnologias utilizadas
 
 - **Java:** Utilizada para desenvolver os scripts de teste e interagir com a aplicação web.
 
@@ -12,7 +12,7 @@ Este projeto automatiza a execução de testes no site [OrangeHRM](https://opens
 
 - **Cucumber:** Ferramenta que suporta o Desenvolvimento Orientado a Comportamento (BDD), permitindo a descrição de funcionalidades em linguagem natural, facilitando a colaboração e compreensão das funcionalidades do software.
 
-#Tecnologias necessárias
+## Tecnologias necessárias
 
 Este projeto de automação requer as seguintes tecnologias:
 
@@ -20,7 +20,7 @@ Este projeto de automação requer as seguintes tecnologias:
 - **Java:** Linguagem de programação.
 - **Maven:** Ferramenta de automação de compilação e gerenciamento de dependências, essencial para organizar e construir o projeto de automação de testes.
 
-#Clonando o repositório
+## Clonando o repositório
 
 
 Abra o terminal ou prompt de comando em seu computador, e utilize o comando **git clone** seguido da **URL** do repositório. 
@@ -28,7 +28,7 @@ Abra o terminal ou prompt de comando em seu computador, e utilize o comando **gi
 - **git clone https://github.com/empresarialmaia/OrangeHRM.git**
 - **cd OrageHRM** 
 
-#Como executar os testes
+## Como executar os testes
 
 Após clonar o repositório, instale as dependências e execute os testes.
 
@@ -37,7 +37,7 @@ Após clonar o repositório, instale as dependências e execute os testes.
 
 Os testes definidos serão executados, e você poderá ver o resultado diretamente no terminal.
 
-#Contribuindo
+## Contribuindo
 
 - Se você deseja contribuir para o desenvolvimento deste projeto, fique à vontade para qualquer alteração. Toda melhoria e sugestão é bem-vinda!
 
