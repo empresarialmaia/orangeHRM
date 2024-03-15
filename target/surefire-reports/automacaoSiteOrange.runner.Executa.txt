@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: automacaoSiteOrange.runner.Executa
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 42.57 s -- in automacaoSiteOrange.runner.Executa
