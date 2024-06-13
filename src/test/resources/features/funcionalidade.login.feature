@@ -21,11 +21,16 @@ Feature: Login
     But clica no botao login 
     Then aparece mensagem de erro
   
-  @negativo02 
+ @negativo02 
  Scenario: Login senha errada
     When informar usuario correto e senha errada
     But clica no botao login 
     Then aparece mensagem de erro
-    
+   
+@negativo03 
+ Scenario: Login usuario em branco
+    When deixar o campo usuario em branco
+    But clica no botao login 
+    Then aparece mensagem de erro usuario em branco  
  
   

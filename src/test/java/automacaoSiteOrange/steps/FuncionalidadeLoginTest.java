@@ -50,14 +50,27 @@ public class FuncionalidadeLoginTest {
 		Executa.encerrarTest();
 
 	}
-	
+
 	@When("informar usuario correto e senha errada")
 	public void informarUsuarioCorretoESenhaErrada() {
 		page.login(usuario, "errado");
 
-	   
 	}
+
+	@When("deixar o campo usuario em branco")
+	public void deixarOCampoUsuarioEmBranco() {
+		page.login(usuario, "");
+	}
+
 	
-	
-	
+
+	@Then("aparece mensagem de erro usuario em branco")
+	public void apareceMensagemDeErroUsuarioEmBranco() {
+		page.msgErroUsuarioEmBranco();
+		Executa.encerrarTest();
+	    
+	}
+
+
+
 }

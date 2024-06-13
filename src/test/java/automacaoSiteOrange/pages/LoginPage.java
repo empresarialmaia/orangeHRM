@@ -27,5 +27,8 @@ public class LoginPage {
 		Metodos.validarTexto(login.msgErroUsuario, "Invalid credentials");
 	}
 	
-	
+	public void msgErroUsuarioEmBranco() {
+		Metodos.aguardar();
+		Metodos.validarTexto(login.msgErroUsuarioBranco, "Required");
+	}
 }
