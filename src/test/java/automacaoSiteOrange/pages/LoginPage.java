@@ -31,4 +31,9 @@ public class LoginPage {
 		Metodos.aguardar();
 		Metodos.validarTexto(login.msgErroUsuarioBranco, "Required");
 	}
+	
+	public void msgErroSenhaEmBranco() {
+		Metodos.aguardar();
+		Metodos.validarTexto(login.msgErroSenhaBranco, "Required");
+	}
 }

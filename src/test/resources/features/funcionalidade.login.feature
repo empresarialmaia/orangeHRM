@@ -32,5 +32,11 @@ Feature: Login
     When deixar o campo usuario em branco
     But clica no botao login 
     Then aparece mensagem de erro usuario em branco  
+    
+@negativo04 
+ Scenario: Login senha em branco
+    When deixar o campo senha em branco
+    But clica no botao login 
+    Then aparece mensagem de erro senha em branco      
  
   

@@ -59,18 +59,26 @@ public class FuncionalidadeLoginTest {
 
 	@When("deixar o campo usuario em branco")
 	public void deixarOCampoUsuarioEmBranco() {
-		page.login(usuario, "");
+		page.login("", senha);
 	}
-
-	
 
 	@Then("aparece mensagem de erro usuario em branco")
 	public void apareceMensagemDeErroUsuarioEmBranco() {
 		page.msgErroUsuarioEmBranco();
 		Executa.encerrarTest();
-	    
+
 	}
 
+	@When("deixar o campo senha em branco")
+	public void deixarOCampoSenhaEmBranco() {
+		page.login(usuario, "");
+		
+	}
 
+	@Then("aparece mensagem de erro senha em branco")
+	public void apareceMensagemDeErroSenhaEmBranco() {
+		page.msgErroSenhaEmBranco();
+		
+	}
 
 }

@@ -9,6 +9,7 @@ public class ElementosLogin {
 	public By btnLogin = By.xpath("//button[@type='submit']");
 	public By msgErroUsuario = By.xpath("//p[text()='Invalid credentials']");
 	public By msgErroUsuarioBranco = By.xpath("//span[contains(.,'Required')]");
+	public By msgErroSenhaBranco = By.xpath("//span[contains(.,'Required')]");
 
 	                                     
 }
