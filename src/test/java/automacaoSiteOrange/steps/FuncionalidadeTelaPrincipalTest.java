@@ -43,6 +43,7 @@ public class FuncionalidadeTelaPrincipalTest {
 	public void oSistemaNaoInformaNenhumaOpcaoComBaseNaPalavraInformada() {
 		pageTela.validacaoTextoBranco();
 		Executa.encerrarTest();
+		//
 	   
 	}
 
