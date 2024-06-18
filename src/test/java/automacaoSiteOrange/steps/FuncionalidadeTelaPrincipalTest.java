@@ -34,6 +34,20 @@ public class FuncionalidadeTelaPrincipalTest {
 	}
 
 
+	@When("escrever na barra de pesquisa uma opcao não existe desejada")
+	public void escreverNaBarraDePesquisaUmaOpcaoNãoExisteDesejada() {
+		pageTela.escreverCampoPesquisaErro();
+	    
+	}
+	@Then("o sistema nao informa nenhuma opcao com base na palavra informada")
+	public void oSistemaNaoInformaNenhumaOpcaoComBaseNaPalavraInformada() {
+		pageTela.validacaoTextoBranco();
+		Executa.encerrarTest();
+	   
+	}
+
+
+
 
 
 }

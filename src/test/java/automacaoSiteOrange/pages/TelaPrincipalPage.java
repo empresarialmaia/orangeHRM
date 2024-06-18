@@ -25,4 +25,13 @@ public class TelaPrincipalPage {
     public void clicarNaOpcaoPesquisada() {
     	Metodos.clicar(eleTelaPrincipal.textoResultadoPesquisa);
     }
+    
+    public void escreverCampoPesquisaErro() {
+    	Metodos.aguardar();
+    	Metodos.escrever(eleTelaPrincipal.escreverCampoPesquisa, "teste");
+    }
+    public void validacaoTextoBranco() {
+    	Metodos.validarTexto(eleTelaPrincipal.textoEmBrancoPesquisa, "");
+    	
+    }
 }

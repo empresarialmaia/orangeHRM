@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(
 		features = "src/test/resources/features",
 		glue = "automacaoSiteOrange.steps",
-		tags = "@regressivoTelaPrincipal",
+		tags = "@negativoTelaPrincipal",
 		dryRun = false,
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,

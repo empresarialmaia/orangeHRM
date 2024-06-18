@@ -26,7 +26,7 @@ public class Metodos extends Driver {
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 	}
@@ -36,7 +36,7 @@ public class Metodos extends Driver {
 		assertEquals(textoCapturado, textoEsperado);
 		System.out.println(textoEsperado);
 }
- 	
+	
 	
 		
 	}
