@@ -17,9 +17,10 @@ public class Metodos extends Driver {
 		driver.findElement(elemento).click();
 	}
 
+	
 	public static void validarUrl(String urlEsperada) {
-		String urlCapturada = driver.getCurrentUrl();
-		assertEquals(urlCapturada, urlEsperada);
+		assertEquals(driver.getCurrentUrl(),urlEsperada);
+		System.out.println(urlEsperada);
 	}
 	
 	public static void aguardar() {
@@ -31,11 +32,12 @@ public class Metodos extends Driver {
 		}
 	}
 	
+		
 	public static void validarTexto(By elemento, String textoEsperado) {
-		String textoCapturado = driver.findElement(elemento).getText();
-		assertEquals(textoCapturado, textoEsperado);
-		System.out.println(textoEsperado);
-}
+	    assertEquals(driver.findElement(elemento).getText(), textoEsperado);
+	    System.out.println(textoEsperado);
+	}
+
 	
 	
 		

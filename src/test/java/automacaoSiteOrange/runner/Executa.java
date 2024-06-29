@@ -22,8 +22,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 public class Executa extends Driver {
 	
-	public static void iniciarTest(String url) {
-		driver = new ChromeDriver();
+	public static void iniciarTest(String url) {		
+		driver = new ChromeDriver();		
 		driver.manage().window().maximize();
 		driver.get(url);
 		
@@ -31,7 +31,9 @@ public class Executa extends Driver {
 
 	
 	public static void encerrarTest() {
-		driver.quit();
+		if(driver != null) {
+			driver.quit();
+		}		
 		
 	}
 }
