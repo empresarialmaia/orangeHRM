@@ -30,16 +30,7 @@ public class Metodos extends Driver {
 		assertEquals(driver.getCurrentUrl(),urlEsperada);
 		System.out.println(urlEsperada);
 	}
-	
-	public void aguardar() {
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			
-			e.printStackTrace();
-		}
-	}
-	
+		
 		
 	public void validarTexto(By elemento, String textoEsperado) {
 		
