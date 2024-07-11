@@ -7,31 +7,32 @@ public class TelaPrincipalPage {
 	
 	LoginPage logado = new LoginPage();
 	ElementosTelaPrincipal eleTelaPrincipal = new ElementosTelaPrincipal();
+	Metodos metodo = new Metodos();
 	
 	public void telaPrincipalLogado() {
 		logado.login("admin", "admin123");
 		logado.botaoLogin();
 	}
     public void escreverCampoPesquisa() {
-    	Metodos.aguardar();
-    	Metodos.escrever(eleTelaPrincipal.escreverCampoPesquisa, "Admin");
+    	//metodo.aguardar();
+    	metodo.escrever(eleTelaPrincipal.escreverCampoPesquisa, "Admin");
     	
     }
     
     public void validacaoTextoPesquisa() {
-    	Metodos.validarTexto(eleTelaPrincipal.textoResultadoPesquisa, "Admin");
+    	metodo.validarTexto(eleTelaPrincipal.textoResultadoPesquisa, "Admin");
     }
     
     public void clicarNaOpcaoPesquisada() {
-    	Metodos.clicar(eleTelaPrincipal.textoResultadoPesquisa);
+    	metodo.clicar(eleTelaPrincipal.textoResultadoPesquisa);
     }
     
     public void escreverCampoPesquisaErro() {
-    	Metodos.aguardar();
-    	Metodos.escrever(eleTelaPrincipal.escreverCampoPesquisa, "teste");
+    	//metodo.aguardar();
+    	metodo.escrever(eleTelaPrincipal.escreverCampoPesquisa, "teste");
     }
     public void validacaoTextoBranco() {
-    	Metodos.validarTexto(eleTelaPrincipal.textoEmBrancoPesquisa, "");
+    	metodo.validarTexto(eleTelaPrincipal.textoEmBrancoPesquisa, "");
     	
     }
 }
