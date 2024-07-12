@@ -13,8 +13,7 @@ public class TelaPrincipalPage {
 		logado.login("admin", "admin123");
 		logado.botaoLogin();
 	}
-    public void escreverCampoPesquisa() {
-    	//metodo.aguardar();
+    public void escreverCampoPesquisa() {    	
     	metodo.escrever(eleTelaPrincipal.escreverCampoPesquisa, "Admin");
     	
     }
@@ -27,8 +26,7 @@ public class TelaPrincipalPage {
     	metodo.clicar(eleTelaPrincipal.textoResultadoPesquisa);
     }
     
-    public void escreverCampoPesquisaErro() {
-    	//metodo.aguardar();
+    public void escreverCampoPesquisaErro() {    	
     	metodo.escrever(eleTelaPrincipal.escreverCampoPesquisa, "teste");
     }
     public void validacaoTextoBranco() {

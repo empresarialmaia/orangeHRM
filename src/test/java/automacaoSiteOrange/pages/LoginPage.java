@@ -9,7 +9,6 @@ public class LoginPage {
 	Metodos metodo = new Metodos();
 
 	public void login(String usuario, String senha) {
-		//metodo.aguardar();
 		metodo.escrever(login.username, usuario);
 		metodo.escrever(login.password, senha);
 
@@ -23,18 +22,15 @@ public class LoginPage {
 		metodo.validarUrl("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
 	}
 
-	public void msgErro() {
-		//metodo.aguardar();
+	public void msgErro() {		
 		metodo.validarTexto(login.msgErroUsuario, "Invalid credentials");
 	}
 	
-	public void msgErroUsuarioEmBranco() {
-		//metodo.aguardar();
+	public void msgErroUsuarioEmBranco() {		
 		metodo.validarTexto(login.msgErroUsuarioBranco, "Required");
 	}
 	
-	public void msgErroSenhaEmBranco() {
-		//metodo.aguardar();
+	public void msgErroSenhaEmBranco() {		
 		metodo.validarTexto(login.msgErroSenhaBranco, "Required");
 	}
 }
