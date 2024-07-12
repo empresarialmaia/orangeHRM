@@ -7,7 +7,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class FuncionalidadeLoginTest {
-
+    
+	//Massa de teste
 	String usuario = "Admin";
 	String senha = "admin123";
 
@@ -15,7 +16,7 @@ public class FuncionalidadeLoginTest {
 
 	@Given("que eu esteja na tela de login {string}")
 	public void queEuEstejaNaTelaDeLogin(String url) {
-		Executa.iniciarTest(url);
+		Executa.iniciarTest(url,"Chrome");
 
 	}
 

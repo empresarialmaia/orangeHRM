@@ -13,7 +13,7 @@ public class FuncionalidadeTelaPrincipalTest {
 
 	@Given("que esteja na tela principal ja logado {string}")
 	public void queEstejaNaTelaPrincipalJaLogado(String url) {
-		Executa.iniciarTest(url);
+		Executa.iniciarTest(url, "chrome");
 		pageTela.telaPrincipalLogado();
 	    
 	}
