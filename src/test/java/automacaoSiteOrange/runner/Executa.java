@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 @CucumberOptions(
 		features = "src/test/resources/features",
 		glue = "automacaoSiteOrange.steps",
-		tags = "@regressivoTelaPrincipal",
+		tags =  "@regressivoLogin",
 		dryRun = false,
 		monochrome = true,
 		snippets = SnippetType.CAMELCASE,
@@ -24,7 +24,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 
 public class Executa extends Driver {
 	
-	public static void iniciarTest(String url, String tipo) {	
+	public static void abrirNavegador(String url, String tipo) {	
 		if(tipo.equalsIgnoreCase("Chrome")) {
 			driver = new ChromeDriver();
 			
@@ -41,7 +41,7 @@ public class Executa extends Driver {
 	}
 
 	
-	public static void encerrarTest() {
+	public static void fecharNavegador() {
 		if(driver != null) {
 			driver.quit();
 		}		

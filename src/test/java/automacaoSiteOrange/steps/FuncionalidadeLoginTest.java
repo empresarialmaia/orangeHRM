@@ -2,6 +2,7 @@ package automacaoSiteOrange.steps;
 
 import automacaoSiteOrange.pages.LoginPage;
 import automacaoSiteOrange.runner.Executa;
+import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -13,10 +14,18 @@ public class FuncionalidadeLoginTest {
 	String senha = "admin123";
 
 	LoginPage page = new LoginPage();
-
+	
+	
+	@After
+	public void finalizarTeste() {
+		Executa.fecharNavegador();
+		
+	}
+	
+	
 	@Given("que eu esteja na tela de login {string}")
 	public void queEuEstejaNaTelaDeLogin(String url) {
-		Executa.iniciarTest(url,"Chrome");
+		Executa.abrirNavegador(url,"Chrome");
 
 	}
 
@@ -35,7 +44,7 @@ public class FuncionalidadeLoginTest {
 	@Then("login efetuado com sucesso direcionando para tela de usuario logado")
 	public void loginEfetuadoComSucessoDirecionandoParaTelaDeUsuarioLogado() {
 		page.validacaoUrlLogada();
-		Executa.encerrarTest();
+		
 
 	}
 
@@ -47,8 +56,8 @@ public class FuncionalidadeLoginTest {
 
 	@Then("aparece mensagem de erro")
 	public void apareceMensagemDeErro() {
-		page.msgErro();
-		Executa.encerrarTest();
+		page.msgErroUsuarioSenha();
+		
 
 	}
 
@@ -66,7 +75,7 @@ public class FuncionalidadeLoginTest {
 	@Then("aparece mensagem de erro usuario em branco")
 	public void apareceMensagemDeErroUsuarioEmBranco() {
 		page.msgErroUsuarioEmBranco();
-		Executa.encerrarTest();
+		
 
 	}
 
