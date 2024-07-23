@@ -12,6 +12,8 @@ Este projeto automatiza a execução de testes no site [OrangeHRM](https://opens
 
 - **Cucumber:** Ferramenta que suporta o Desenvolvimento Orientado a Comportamento (BDD), permitindo a descrição de funcionalidades em linguagem natural, facilitando a colaboração e compreensão das funcionalidades do software.
 
+- **Apache Commons IO:** Biblioteca que auxilia na manipulação de arquivos, o que inclui a cópia e movimentação de arquivos de evidências durante os testes.
+
 ## Tecnologias necessárias
 
 Este projeto de automação requer as seguintes tecnologias:
