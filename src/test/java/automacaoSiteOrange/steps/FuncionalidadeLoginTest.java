@@ -8,24 +8,22 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class FuncionalidadeLoginTest {
-    
-	//Massa de teste
+
+	// Massa de teste
 	String usuario = "Admin";
 	String senha = "admin123";
 
 	LoginPage page = new LoginPage();
-	
-	
+
 	@After
 	public void finalizarTeste() {
 		Executa.fecharNavegador();
-		
+
 	}
-	
-	
+
 	@Given("que eu esteja na tela de login {string}")
 	public void queEuEstejaNaTelaDeLogin(String url) {
-		Executa.abrirNavegador(url,"Chrome");
+		Executa.abrirNavegador(url, "Chrome");
 
 	}
 
@@ -43,8 +41,8 @@ public class FuncionalidadeLoginTest {
 
 	@Then("login efetuado com sucesso direcionando para tela de usuario logado")
 	public void loginEfetuadoComSucessoDirecionandoParaTelaDeUsuarioLogado() {
-		page.validacaoUrlLogada();
-		
+		page.validacaoUrlLogada("positivoLogin", "Login com sucesso",
+				"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
 
 	}
 
@@ -56,8 +54,8 @@ public class FuncionalidadeLoginTest {
 
 	@Then("aparece mensagem de erro")
 	public void apareceMensagemDeErro() {
-		page.msgErroUsuarioSenha();
-		
+		page.msgErroUsuarioSenha("Invalid credentials","negativoLogin", 
+				"Mensagem credenciais inválidas");
 
 	}
 
@@ -74,21 +72,20 @@ public class FuncionalidadeLoginTest {
 
 	@Then("aparece mensagem de erro usuario em branco")
 	public void apareceMensagemDeErroUsuarioEmBranco() {
-		page.msgErroUsuarioEmBranco();
-		
+		page.msgErroUsuarioEmBranco("Required","negativoLogin", "Mensagem usuario em branco");
 
 	}
 
 	@When("deixar o campo senha em branco")
 	public void deixarOCampoSenhaEmBranco() {
 		page.login(usuario, "");
-		
+
 	}
 
 	@Then("aparece mensagem de erro senha em branco")
 	public void apareceMensagemDeErroSenhaEmBranco() {
-		page.msgErroSenhaEmBranco();
-		
+		page.msgErroSenhaEmBranco("Required", "negativoLogin", "Mensagem senha em branco");
+
 	}
 
 }

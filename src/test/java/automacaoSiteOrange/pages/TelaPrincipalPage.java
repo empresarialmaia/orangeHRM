@@ -1,42 +1,49 @@
 package automacaoSiteOrange.pages;
 
-import automacaoSiteOrange.elementos.ElementosLogin;
-import automacaoSiteOrange.elementos.ElementosTelaPrincipal;
+import org.openqa.selenium.By;
+
 import automacaoSiteOrange.metodos.Metodos;
 
 public class TelaPrincipalPage {
 	
-	LoginPage logado = new LoginPage();
-	ElementosLogin login = new ElementosLogin();
-	ElementosTelaPrincipal eleTelaPrincipal = new ElementosTelaPrincipal();
+	By escreverCampoPesquisa = By.xpath("//input[@placeholder='Search']");
+	By textoResultadoPesquisa = By.xpath("//a[contains(.,'Admin')]");
+	By textoDigitadoPesquisa = By.xpath("//input[contains(@placeholder,'Search')]");
+	                                                       
+	
+	LoginPage logado = new LoginPage();	
 	Metodos metodo = new Metodos();
 	
-	public void telaPrincipalLogado() {	
-		metodo.esperarElementoVisivel(login.username, 5);
-		logado.login("admin", "admin123");
+	public void telaPrincipalLogado(String ususario, String senha) {	
+		metodo.esperarElementoVisivel(logado.usuario);
+		logado.login(ususario,senha);
 		logado.botaoLogin();
+		
 	}
-    public void escreverCampoPesquisa() { 
-    	metodo.esperarElementoVisivel(eleTelaPrincipal.escreverCampoPesquisa, 5);
-    	metodo.escrever(eleTelaPrincipal.escreverCampoPesquisa, "Admin");
+	
+    public void escreverCampoPesquisa(String texto) { 
+    	metodo.esperarElementoVisivel(this.escreverCampoPesquisa);
+    	metodo.escrever(this.escreverCampoPesquisa, texto);
     	
     }
     
-    public void validacaoTextoPesquisa() {  
-    	metodo.esperarElementoVisivel(eleTelaPrincipal.textoResultadoPesquisa, 5);
-    	metodo.validarTexto(eleTelaPrincipal.textoResultadoPesquisa, "Admin");
+    public void validacaoTextoPesquisa(String texto) {  
+    	metodo.esperarElementoVisivel(this.textoResultadoPesquisa);
+    	metodo.validarTexto(this.textoResultadoPesquisa, texto);
     }
     
     public void clicarNaOpcaoPesquisada() {
-    	metodo.clicar(eleTelaPrincipal.textoResultadoPesquisa);
+    	metodo.esperarElementoVisivel(textoResultadoPesquisa);
+    	metodo.clicar(this.textoResultadoPesquisa);
     }
     
-    public void escreverCampoPesquisaErro() {
-    	metodo.esperarElementoVisivel(eleTelaPrincipal.escreverCampoPesquisa, 5);
-    	metodo.escrever(eleTelaPrincipal.escreverCampoPesquisa, "teste");
+    public void escreverCampoPesquisaErro(String texto) {
+    	metodo.esperarElementoVisivel(this.escreverCampoPesquisa);
+    	metodo.escrever(this.escreverCampoPesquisa, texto);
     }
-    public void validacaoTextoInexistentePrint() {
-    	metodo.printTela("Negativo","Pesquisa_Item_Inexistente");
+    public void validacaoPrint(String historia, String nomeAqrquivo) {
+    	metodo.esperarElementoVisivel(this.textoDigitadoPesquisa);
+    	metodo.printTela(historia, nomeAqrquivo);
     	
     }
 }
