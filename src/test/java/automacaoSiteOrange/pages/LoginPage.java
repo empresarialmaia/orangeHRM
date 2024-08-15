@@ -33,8 +33,7 @@ public class LoginPage {
 		metodo.printTela(historia, nomeArquivo);
 		metodo.validarUrl(url);
 	
-		//metodo.printTela("positivoLogin", "Login com sucesso");
-		//metodo.validarUrl("https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
+		
 	}
 
 	public void msgErroUsuarioSenha(String msg, String historia, String nomeAqrquivo) {	
@@ -42,24 +41,21 @@ public class LoginPage {
 		metodo.validarTexto(this.msgErroUsuario, msg);
 		metodo.printTela(historia, nomeAqrquivo);
 		
-		//metodo.validarTexto(this.msgErroUsuario, "Invalid credentials");
-		//metodo.printTela("negativoLogin", "Mensagem credenciais inválidas");
+		
 	}
 	
 	public void msgErroUsuarioEmBranco(String msg, String historia, String nomeArquivo) {		
 		metodo.validarTexto(this.msgErroUsuarioSenhaBranco, msg);
 		metodo.printTela(historia, nomeArquivo);
 		
-		//metodo.validarTexto(this.msgErroUsuarioSenhaBranco, "Required");
-		//metodo.printTela("negativoLogin", "Mensagem usuario em branco");
+		
 	}
 	
 	public void msgErroSenhaEmBranco(String msg, String historia, String nomeArquivo) {		
 		metodo.validarTexto(this.msgErroUsuarioSenhaBranco, msg);
 		metodo.printTela(historia, nomeArquivo);
 		
-		//metodo.validarTexto(this.msgErroUsuarioSenhaBranco, "Required");
-		//metodo.printTela("negativoLogin", "Mensagem senha em branco");
+		
 
 	}
 }
