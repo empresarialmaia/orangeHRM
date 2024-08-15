@@ -56,6 +56,7 @@ public class LoginPage {
 		metodo.printTela(historia, nomeArquivo);
 		
 		
+		
 
 	}
 }

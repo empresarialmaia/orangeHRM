@@ -45,5 +45,6 @@ public class TelaPrincipalPage {
     	metodo.esperarElementoVisivel(this.textoDigitadoPesquisa);
     	metodo.printTela(historia, nomeAqrquivo);
     	
+    	
     }
 }
