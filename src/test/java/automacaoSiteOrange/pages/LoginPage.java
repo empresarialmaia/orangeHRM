@@ -6,12 +6,15 @@ import automacaoSiteOrange.metodos.Metodos;
 
 public class LoginPage {
 
+	 By textoPaginaDeLogin= By.xpath("//h5[contains(.,'Login')]");
+
 	 By usuario = By.name("username");
 	 By senha = By.name("password");
 	 By btnLogin = By.xpath("//button[@type='submit']");
 	 By msgErroUsuario = By.xpath("//p[text()='Invalid credentials']");
 	 By msgErroUsuarioSenhaBranco = By.xpath("//span[contains(.,'Required')]");
 	 By textoUsuarioLogado = By.xpath("//h6[text()='Dashboard']");
+	 
 	 	
 	
 	Metodos metodo = new Metodos();
@@ -58,5 +61,10 @@ public class LoginPage {
 		
 		
 
+	}
+	
+	public void textoPaginaLogin(String textoPaginaDeLogin) {
+		metodo.esperarElementoVisivel(this.textoPaginaDeLogin);
+		metodo.validarTexto(this.textoPaginaDeLogin, textoPaginaDeLogin);
 	}
 }

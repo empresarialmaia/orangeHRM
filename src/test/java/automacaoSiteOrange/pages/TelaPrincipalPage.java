@@ -9,7 +9,9 @@ public class TelaPrincipalPage {
 	By escreverCampoPesquisa = By.xpath("//input[@placeholder='Search']");
 	By textoResultadoPesquisa = By.xpath("//a[contains(.,'Admin')]");
 	By textoDigitadoPesquisa = By.xpath("//input[contains(@placeholder,'Search')]");
-	                                                       
+	 
+	
+	
 	
 	LoginPage logado = new LoginPage();	
 	Metodos metodo = new Metodos();
@@ -43,8 +45,10 @@ public class TelaPrincipalPage {
     }
     public void validacaoPrint(String historia, String nomeAqrquivo) {
     	metodo.esperarElementoVisivel(this.textoDigitadoPesquisa);
-    	metodo.printTela(historia, nomeAqrquivo);
+    	metodo.printTela(historia, nomeAqrquivo);    	
     	
+    }    
+     
     	
-    }
+    
 }

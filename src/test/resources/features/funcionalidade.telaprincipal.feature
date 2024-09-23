@@ -1,5 +1,5 @@
 
-@regressivoTelaPrincipal
+@regressivoTelaprincipal
 Feature: Tela principal
         COMO usuario adm do sistema
         QUERO navegar pela tela princial do sistema
@@ -20,4 +20,7 @@ Feature: Tela principal
   Scenario: Buscar um item não existente nas opcoes de menu pela barra de pesquisa
     When escrever na barra de pesquisa uma opcao não existe desejada 
     Then o sistema nao informa nenhuma opcao com base na palavra informada
+    
+   
+  
   

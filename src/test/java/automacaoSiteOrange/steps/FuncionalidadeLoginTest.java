@@ -24,6 +24,7 @@ public class FuncionalidadeLoginTest {
 	@Given("que eu esteja na tela de login {string}")
 	public void queEuEstejaNaTelaDeLogin(String url) {
 		Executa.abrirNavegador(url, "Chrome");
+		page.textoPaginaLogin("Login");
 
 	}
 
@@ -41,8 +42,11 @@ public class FuncionalidadeLoginTest {
 
 	@Then("login efetuado com sucesso direcionando para tela de usuario logado")
 	public void loginEfetuadoComSucessoDirecionandoParaTelaDeUsuarioLogado() {
-		page.validacaoUrlLogada("positivoLogin", "Login com sucesso",
-				"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index");
+		page.validacaoUrlLogada(
+				"positivoLogin",
+				"Login com sucesso",
+				"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
+				);
 
 	}
 
@@ -54,8 +58,10 @@ public class FuncionalidadeLoginTest {
 
 	@Then("aparece mensagem de erro")
 	public void apareceMensagemDeErro() {
-		page.msgErroUsuarioSenha("Invalid credentials","negativoLogin", 
-				"Mensagem credenciais inválidas");
+		page.msgErroUsuarioSenha(
+				"Invalid credentials","negativoLogin", 
+				"Mensagem credenciais inválidas"
+				);
 
 	}
 
@@ -72,7 +78,10 @@ public class FuncionalidadeLoginTest {
 
 	@Then("aparece mensagem de erro usuario em branco")
 	public void apareceMensagemDeErroUsuarioEmBranco() {
-		page.msgErroUsuarioEmBranco("Required","negativoLogin", "Mensagem usuario em branco");
+		page.msgErroUsuarioEmBranco(
+				"Required","negativoLogin",
+				"Mensagem usuario em branco"
+				);
 
 	}
 
@@ -84,7 +93,10 @@ public class FuncionalidadeLoginTest {
 
 	@Then("aparece mensagem de erro senha em branco")
 	public void apareceMensagemDeErroSenhaEmBranco() {
-		page.msgErroSenhaEmBranco("Required", "negativoLogin", "Mensagem senha em branco");
+		page.msgErroSenhaEmBranco(
+				"Required", 
+				"negativoLogin", 
+				"Mensagem senha em branco");
 
 	}
 
