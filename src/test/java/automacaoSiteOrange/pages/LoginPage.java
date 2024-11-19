@@ -1,38 +1,29 @@
 package automacaoSiteOrange.pages;
 
-import org.openqa.selenium.By;
-
+import automacaoSiteOrange.elementos.Elementos;
 import automacaoSiteOrange.metodos.Metodos;
 
 public class LoginPage {
-
-	 By textoPaginaDeLogin= By.xpath("//h5[contains(.,'Login')]");
-
-	 By usuario = By.name("username");
-	 By senha = By.name("password");
-	 By btnLogin = By.xpath("//button[@type='submit']");
-	 By msgErroUsuario = By.xpath("//p[text()='Invalid credentials']");
-	 By msgErroUsuarioSenhaBranco = By.xpath("//span[contains(.,'Required')]");
-	 By textoUsuarioLogado = By.xpath("//h6[text()='Dashboard']");
-	 
 	 	
 	
 	Metodos metodo = new Metodos();
+	Elementos elemetoPage = new Elementos();
+	
 
 	public void login(String usuario, String senha) {
-		metodo.esperarElementoVisivel(this.usuario);
-		metodo.escrever(this.usuario, usuario);
-		metodo.escrever(this.senha, senha);
+		metodo.esperarElementoVisivel(elemetoPage.usuario);
+		metodo.escrever(elemetoPage.usuario, usuario);
+		metodo.escrever(elemetoPage.senha, senha);
 
 	}
 
 	public void botaoLogin() {		
-		metodo.clicar(this.btnLogin);
+		metodo.clicar(elemetoPage.btnLogin);
 		
 	}
 
 	public void validacaoUrlLogada(String historia, String nomeArquivo, String url) {
-		metodo.esperarElementoVisivel(this.textoUsuarioLogado);
+		metodo.esperarElementoVisivel(elemetoPage.textoUsuarioLogado);
 		metodo.printTela(historia, nomeArquivo);
 		metodo.validarUrl(url);
 	
@@ -40,22 +31,22 @@ public class LoginPage {
 	}
 
 	public void msgErroUsuarioSenha(String msg, String historia, String nomeAqrquivo) {	
-		metodo.esperarElementoVisivel(this.msgErroUsuario);
-		metodo.validarTexto(this.msgErroUsuario, msg);
+		metodo.esperarElementoVisivel(elemetoPage.msgErroUsuario);
+		metodo.validarTexto(elemetoPage.msgErroUsuario, msg);
 		metodo.printTela(historia, nomeAqrquivo);
 		
 		
 	}
 	
 	public void msgErroUsuarioEmBranco(String msg, String historia, String nomeArquivo) {		
-		metodo.validarTexto(this.msgErroUsuarioSenhaBranco, msg);
+		metodo.validarTexto(elemetoPage.msgErroUsuarioSenhaBranco, msg);
 		metodo.printTela(historia, nomeArquivo);
 		
 		
 	}
 	
 	public void msgErroSenhaEmBranco(String msg, String historia, String nomeArquivo) {		
-		metodo.validarTexto(this.msgErroUsuarioSenhaBranco, msg);
+		metodo.validarTexto(elemetoPage.msgErroUsuarioSenhaBranco, msg);
 		metodo.printTela(historia, nomeArquivo);
 		
 		
@@ -64,7 +55,7 @@ public class LoginPage {
 	}
 	
 	public void textoPaginaLogin(String textoPaginaDeLogin) {
-		metodo.esperarElementoVisivel(this.textoPaginaDeLogin);
-		metodo.validarTexto(this.textoPaginaDeLogin, textoPaginaDeLogin);
+		metodo.esperarElementoVisivel(elemetoPage.textoPaginaDeLogin);
+		metodo.validarTexto(elemetoPage.textoPaginaDeLogin, textoPaginaDeLogin);
 	}
 }
