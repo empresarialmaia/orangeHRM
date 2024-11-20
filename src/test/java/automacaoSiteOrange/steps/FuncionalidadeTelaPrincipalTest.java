@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 
 public class FuncionalidadeTelaPrincipalTest {
 	
-	// Massa de teste
+	//Massa de teste
 		String usuario = "Admin";
 		String senha = "admin123";
 	
