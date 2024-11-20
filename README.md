@@ -27,7 +27,7 @@ Este projeto de automação requer as seguintes tecnologias:
 
 Abra o terminal ou prompt de comando em seu computador, e utilize o comando **git clone** seguido da **URL** do repositório. 
 
-- **git clone https://github.com/empresarialmaia/OrangeHRM.git**
+- **git clone https://github.com/empresarialmaia/orangeHRM.git**
 - **cd OrageHRM** 
 
 ## Como executar os testes
